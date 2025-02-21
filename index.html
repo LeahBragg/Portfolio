@@ -40,7 +40,7 @@
                 color: white;
             }
             .navbar a:hover {
-                background-color: #5D0087;
+                background-color: #5d0088;
             }
             
             #Home{
@@ -49,6 +49,7 @@
                 height: 900px;
                 padding: 200px 200px;
                 background-image: url("Website\ Banner.png");
+                background-position: right;
             }
             #Home h1 {
                 font-size: 150px;
@@ -66,6 +67,7 @@
                 width: 200px;
                 border-radius: 15px;
                 padding: 14px 16px;
+                margin-top: 10px;
                 background-color: #1F0D49;
                 font-size: 30px;
                 border: none;
@@ -155,7 +157,7 @@
                 text-align: center;
                 align-items: center;
                 justify-content: center;
-                
+
             }
             #Contact h1 {
                 font-size: 100px;
@@ -173,6 +175,15 @@
             .linkPanel{
                 text-align: right;
                 line-height: 50px;
+            }
+            @media only screen and (max-width: 1000px) {
+                .linkPanel {
+                    text-align: left;
+                }
+                #Contact {
+                    flex-direction: column;
+                    height: 600px;
+                }
             }
 
             #GraphicDesign{
