@@ -2,9 +2,11 @@
 <html>
     <head>
         <title>Leah Bragg</title>
-        <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <style>
             body{
                 margin: 0;
@@ -15,16 +17,22 @@
             }
 
             .navbar {
-                background-color: #4F378A;
+                background-color: #1F0D49;
                 overflow: hidden;
                 display: flex;
                 flex-direction: row;
                 float: right;
                 font-size: 20px;
+                border-radius: 0;
+                border: none;
+                margin: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 10;
             }
 
             .navbar a {
-                margin: 0;
                 height: 50px;
                 padding: 14px 16px;
                 text-decoration: none;
@@ -32,15 +40,15 @@
                 color: white;
             }
             .navbar a:hover {
-                background-color: #6F55B0;
+                background-color: #5D0087;
             }
             
             #Home{
                 display: flex;
                 flex-direction: column;
-                height: 400px;
+                height: 900px;
                 padding: 200px 200px;
-                background-color: #6F55B0;
+                background-image: url("Website\ Banner.png");
             }
             #Home h1 {
                 font-size: 150px;
@@ -56,14 +64,15 @@
                 width: 200px;
                 border-radius: 15px;
                 padding: 14px 16px;
-                background-color: #2B1C52;
+                background-color: #1F0D49;
                 font-size: 30px;
                 border: none;
                 color: white;
                 font-family: "Inter";
             }
             .btn:hover{
-                background-color: #4F378A;
+                background-color: #AF00FE;
+                color: white;
             }
             .btn:active{
                 transform: translateY(4px);
@@ -73,7 +82,8 @@
                 display: flex;
                 margin: 0;
                 flex-direction: column;
-                background-color: #4F378A;
+                background-color: #6734B9;
+                text-align: center;
             }
 
             .Project{
@@ -81,11 +91,14 @@
                 height: 800px;
                 flex-direction: row;
                 align-items: center;
+                overflow: hidden;
+                justify-content: left;
             }
             .Project .content {
                 display: flex;
                 flex-direction: column;
                 height: 200px;
+                text-align: left;
             }
             .content h1{
                 font-size: 70px;
@@ -107,11 +120,11 @@
             }
             .buttonPanel .btn{
                 width: auto;
-                background-color: #2B1C52;
+                background-color: #1F0D49;
                 margin-right: 10px;
             }
             .buttonPanel .btn:hover{
-                background-color: #6F55B0;
+                background-color: #AF00FE;
             }
             .buttonPanel .btn:active{
                 transform: translateY(4px);
@@ -134,24 +147,54 @@
 
             #Contact{
                 display: flex;
-                flex-direction: column;
-                background-color: #6F55B0;
+                flex-direction: row;
+                background-color: #5D0087;
                 height: 400px;
                 text-align: center;
                 align-items: center;
+                justify-content: center;
+                
             }
             #Contact h1 {
-                font-size: 90px;
-                margin-bottom: 0;
+                font-size: 100px;
+                text-align: left;
+                margin: 10px;
             }
             #Contact a {
-                font-size: 30px;
-                margin-top: 10px;
+                font-size: 40px;
                 color: white;
                 text-decoration: none;
             }
             #Contact a:hover{
-                color: rgb(185, 140, 236);
+                color: #1F0D49;
+            }
+            .linkPanel{
+                text-align: right;
+                line-height: 50px;
+            }
+
+            #GraphicDesign{
+                background-color: #6734B9;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+
+            iframe {
+                width: 49%;
+                height: 400px;
+                float: center;
+                margin: 5px;
+            }
+            .carousel-control.left, .carousel-control.right {
+                background-image:none !important;
+                filter: none !important;
+                
+            }
+            .item.active{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+               
             }
         </style>
     </head>
@@ -170,7 +213,7 @@
         </div>
 
         <div id = "Projects">
-
+            <h1>SOFTWARE DEVELOPMENT</h1>
             <div class = "Project left">
                 <svg><image id = "pixel_circle" href = "pixel_circle.svg"></svg>
                 <div class = "content">
@@ -195,7 +238,7 @@
 
             </div>
             <div class = "Project left">
-                <svg><image href = "circle.svg"></svg>
+                <svg><image href = "wordle_circle.svg"></svg>
                 <div class = "content">
                     <h1>CUSTOM WORDLE CLONE</h1>
                     <p>Java App</p>
@@ -211,16 +254,55 @@
                     <h1>CLOSET TRACKER</h1>
                     <p>Web App</p>
                 </div>
-                <svg><image href = "circle.svg"></svg>
+                <svg><image href = "clueless_circle.svg"></svg>
             </div>
 
         </div>
 
+        <div id = "GraphicDesign">
+            <h1>GRAPHIC DESIGN</h1>
+            <div id="myCarousel" class="carousel slide" data-interval = "false">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+              
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <iframe src="https://www.behance.net/embed/project/218272675?ilo0=1"  allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                        <iframe src="https://www.behance.net/embed/project/218272947?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+
+                    <div class="item">
+                        <iframe src="https://www.behance.net/embed/project/218272407?ilo0=1"  allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                        <iframe src="https://www.behance.net/embed/project/218272971?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+
+                    <div class="item">
+                        <iframe src="https://www.behance.net/embed/project/218272757?ilo0=1"  allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                        <iframe src="https://www.behance.net/embed/project/218272921?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+              
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
         <div id = "Contact">
-            <h1>Get in Contact</h1>
-            <a href = "mailto:Leah.K.Bragg@gmail.com:">Leah.k.Bragg@gmail.com</a>
-            <a href = "mailto:Leah.Bragg@slu.edu">Leah.Bragg@slu.edu</a>
-            <a href = "LeahBraggResume.pdf" target = "_blank"><button class="btn"><i class = "fa fa-download"></i> RESUME</button></a>
+            <h1>GET IN <br>CONTACT</h1>
+            <div class = "linkPanel">
+                <a href = "mailto:Leah.K.Bragg@gmail.com:" style="background-color: #D300CE; padding-right: 5px; padding-left: 5px;">Leah.K.Bragg@gmail.com</a><br>
+                <a href = "mailto:Leah.Bragg@slu.edu" style="background-color: #D300CE; padding: 5p; padding-left: 5px">Leah.Bragg@slu.edu</a><br>
+                <a href = "LeahBraggResume.pdf" target = "_blank"><button class="btn"><i class = "fa fa-download"></i> RESUME</button></a>
+            </div>
         </div>
     </body>
 </html>
