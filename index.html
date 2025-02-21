@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leah Bragg</title>
+        <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                font-family: "Inter";
+                color: white;
+            }
+
+            .navbar {
+                background-color: #4F378A;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                float: right;
+                font-size: 20px;
+            }
+
+            .navbar a {
+                margin: 0;
+                height: 50px;
+                padding: 14px 16px;
+                text-decoration: none;
+                align-content: center;
+                color: white;
+            }
+            .navbar a:hover {
+                background-color: #6F55B0;
+            }
+            
+            #Home{
+                display: flex;
+                flex-direction: column;
+                height: 400px;
+                padding: 200px 200px;
+                background-color: #6F55B0;
+            }
+            #Home h1 {
+                font-size: 150px;
+                margin: 0;
+            }
+            #Home p {
+                font-size: 30px;
+                margin: 10px;
+            }
+
+            .btn{
+                height: 70px;
+                width: 200px;
+                border-radius: 15px;
+                padding: 14px 16px;
+                background-color: #2B1C52;
+                font-size: 30px;
+                border: none;
+                color: white;
+                font-family: "Inter";
+            }
+            .btn:hover{
+                background-color: #4F378A;
+            }
+            .btn:active{
+                transform: translateY(4px);
+            }
+
+            #Projects{
+                display: flex;
+                margin: 0;
+                flex-direction: column;
+                background-color: #4F378A;
+            }
+
+            .Project{
+                display: flex;
+                height: 800px;
+                flex-direction: row;
+                align-items: center;
+            }
+            .Project .content {
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+            }
+            .content h1{
+                font-size: 70px;
+                margin: 0;
+            }
+            .content p{
+                font-size: 40px;
+                margin-top: 10px;
+            }
+            .Project.right {
+                justify-content: right;
+            }
+            .Project.right .content{
+                text-align: right;
+            }
+            
+            .buttonPanel {
+                display: inline;
+            }
+            .buttonPanel .btn{
+                width: auto;
+                background-color: #2B1C52;
+                margin-right: 10px;
+            }
+            .buttonPanel .btn:hover{
+                background-color: #6F55B0;
+            }
+            .buttonPanel .btn:active{
+                transform: translateY(4px);
+            }
+
+            svg{
+                height: 650px;
+                width: 650px;
+            }
+            .left svg {
+                transform: translateX(-30%);
+            }
+            .right svg {
+                transform: translateX(30%);
+            }
+            svg image{
+                height: 100%;
+                width: 100%;   
+            }
+
+            #Contact{
+                display: flex;
+                flex-direction: column;
+                background-color: #6F55B0;
+                height: 400px;
+                text-align: center;
+                align-items: center;
+            }
+            #Contact h1 {
+                font-size: 90px;
+                margin-bottom: 0;
+            }
+            #Contact a {
+                font-size: 30px;
+                margin-top: 10px;
+                color: white;
+                text-decoration: none;
+            }
+            #Contact a:hover{
+                color: rgb(185, 140, 236);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class = "navbar">
+            <a href = "#Home">Home</a>
+            <a href = "#Projects">Projects</a>
+            <a href = "#Contact">Contact</a>
+        </div>
+
+        <div id = "Home">
+            <h1>LEAH BRAGG</h1>
+            <p>Software Developer | Graphic Designer</p>
+            <a href = "#Contact"><button class = "btn">CONTACT</button></a>
+        </div>
+
+        <div id = "Projects">
+
+            <div class = "Project left">
+                <svg><image id = "pixel_circle" href = "pixel_circle.svg"></svg>
+                <div class = "content">
+                    <h1>PIXEL ART</h1>
+                    <p>Web App</p>
+                    <div class = "buttonPanel">
+                        <a href = "https://leahbragg.github.io/PixelArt/" target = "_blank"><button class="btn" href>EXPLORE</button></a>
+                        <a href = "https://github.com/LeahBragg/PixelArt" target = "_blank"><button class="btn">VIEW ON GITHUB</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "Project right">
+                <div class = "content">
+                    <h1>WHAT'S THE WEATHER?</h1>
+                    <p>Web App</p>
+                    <div class = "buttonPanel">
+                        <a href = "https://leahbragg.github.io/weather/" target = "_blank"><button class="btn">EXPLORE</button></a>
+                        <a href = "https://github.com/LeahBragg/weather" target = "_blank"><button class="btn">VIEW ON GITHUB</button></a>
+                    </div>
+                </div>
+                <svg><image href = "sun_circle.svg"></svg>
+
+            </div>
+            <div class = "Project left">
+                <svg><image href = "circle.svg"></svg>
+                <div class = "content">
+                    <h1>CUSTOM WORDLE CLONE</h1>
+                    <p>Java App</p>
+                    <div class = "buttonPanel">
+                        <a href = "WordleDemo.mp4" target = "_blank"><button class="btn">VIEW DEMO</button></a>
+                        <a href = "https://github.com/LeahBragg/wordleClone" target = "_blank"><button class="btn">VIEW ON GITHUB</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class = "Project right">
+                <div class = "content">
+                    <h1>COMING SOON</h1>
+                    <h1>CLOSET TRACKER</h1>
+                    <p>Web App</p>
+                </div>
+                <svg><image href = "circle.svg"></svg>
+            </div>
+
+        </div>
+
+        <div id = "Contact">
+            <h1>Get in Contact</h1>
+            <a href = "mailto:Leah.K.Bragg@gmail.com:">Leah.k.Bragg@gmail.com</a>
+            <a href = "mailto:Leah.Bragg@slu.edu">Leah.Bragg@slu.edu</a>
+            <a href = "LeahBraggResume.pdf" target = "_blank"><button class="btn"><i class = "fa fa-download"></i> RESUME</button></a>
+        </div>
+    </body>
+</html>
